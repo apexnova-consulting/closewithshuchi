@@ -5,12 +5,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-secondary text-white">
       <div className="container py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Close With Shuchi</h3>
+            <h3 className="text-xl font-heading font-bold mb-4">Close With Shuchi</h3>
             <p className="mb-4">Your All-In-One Real Estate, Title & Notary Expert in New Jersey</p>
             <div className="flex space-x-4">
               <a 
@@ -27,7 +27,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Services</h3>
+            <h3 className="text-xl font-heading font-bold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#real-estate" className="hover:text-accent transition-colors">
@@ -49,7 +49,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Contact</h3>
+            <h3 className="text-xl font-heading font-bold mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="flex items-center">
                 <FaPhone className="h-4 w-4 mr-2" />
@@ -68,7 +68,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+            <h3 className="text-xl font-heading font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#about" className="hover:text-accent transition-colors">
@@ -94,7 +94,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-800 text-center text-sm">
+        <div className="mt-12 pt-8 border-t border-opacity-20 border-white text-center text-sm">
           <p>NJ Realtor License: 2336672 | NJ Notary: 0050217472</p>
           <p className="mt-2">
             &copy; {currentYear} Close With Shuchi. All rights reserved.

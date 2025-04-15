@@ -13,7 +13,7 @@ export default function Header() {
       <div className="container flex items-center justify-between py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <span className="text-2xl font-bold text-primary">CloseWithShuchi</span>
+          <span className="text-2xl font-heading font-bold text-primary">Close With Shuchi</span>
         </Link>
 
         {/* Desktop Navigation */}

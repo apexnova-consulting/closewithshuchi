@@ -1,18 +1,17 @@
 import '@/styles/globals.css';
-import { Inter, Poppins } from 'next/font/google';
+import { Playfair_Display, Montserrat } from 'next/font/google';
 import type { Metadata } from 'next';
 
-const inter = Inter({
+const montserrat = Montserrat({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-montserrat',
 });
 
-const poppins = Poppins({
-  weight: ['400', '500', '600', '700'],
+const playfair = Playfair_Display({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-poppins',
+  variable: '--font-playfair',
 });
 
 export const metadata: Metadata = {
@@ -37,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${montserrat.variable} ${playfair.variable}`}>
       <body className="min-h-screen">
         {children}
       </body>

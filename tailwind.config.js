@@ -9,21 +9,21 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#2563eb', // Blue
-          dark: '#1e40af',
+          DEFAULT: '#b07c4f', // Warm brown/copper
+          dark: '#8b5e3c',
         },
         secondary: {
-          DEFAULT: '#10b981', // Emerald
-          dark: '#047857',
+          DEFAULT: '#413c58', // Deep purple/navy
+          dark: '#2d2a3e',
         },
         accent: {
-          DEFAULT: '#f59e0b', // Amber
-          dark: '#d97706',
+          DEFAULT: '#e09f7d', // Peach/coral
+          dark: '#c78966',
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
-        heading: ['var(--font-poppins)', 'sans-serif'],
+        sans: ['var(--font-montserrat)', 'sans-serif'],
+        heading: ['var(--font-playfair)', 'serif'],
       },
     },
   },
