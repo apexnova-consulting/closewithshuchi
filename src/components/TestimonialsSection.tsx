@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section id="testimonials" className="section bg-white">
+    <section id="testimonials" className="section bg-soft-pink">
       <div className="container">
         <MotionDiv 
           initial={{ opacity: 0, y: 20 }}

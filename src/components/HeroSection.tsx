@@ -18,7 +18,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative bg-gradient-to-r from-blue-50 to-blue-100 overflow-hidden">
+    <section className="relative bg-soft-pink overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 z-0 opacity-20">
         <div className="absolute inset-0 bg-pattern" />

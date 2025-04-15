@@ -12,7 +12,7 @@ export default function ServiceAreaSection() {
   ];
 
   return (
-    <section id="service-area" className="section bg-gray-50">
+    <section id="service-area" className="section bg-soft-pink">
       <div className="container">
         <MotionDiv 
           initial={{ opacity: 0, y: 20 }}

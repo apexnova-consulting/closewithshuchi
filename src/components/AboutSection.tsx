@@ -7,7 +7,7 @@ import { MotionDiv } from './motion-wrapper';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="section bg-white">
+    <section id="about" className="section bg-soft-pink">
       <div className="container">
         <MotionDiv 
           initial={{ opacity: 0, y: 20 }}
@@ -29,10 +29,11 @@ export default function AboutSection() {
             className="relative h-[500px] w-full rounded-lg overflow-hidden shadow-lg"
           >
             <Image
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80"
+              src="/images/shuchi-portrait.jpg"
               alt="Shuchi Alam"
               fill
               style={{ objectFit: 'cover' }}
+              priority
             />
           </MotionDiv>
 

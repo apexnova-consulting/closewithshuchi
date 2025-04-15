@@ -57,7 +57,7 @@ export default function ServicesSection() {
   });
 
   return (
-    <section id="services" className="section bg-gray-50">
+    <section id="services" className="section bg-soft-pink">
       <div className="container">
         <MotionDiv 
           initial={{ opacity: 0, y: 20 }}

@@ -52,4 +52,8 @@
   .section {
     @apply py-16 md:py-24;
   }
+  
+  .bg-soft-pink {
+    background-color: #F8E1E7;
+  }
 } 
