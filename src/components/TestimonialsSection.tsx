@@ -11,28 +11,28 @@ const testimonials = [
     id: 1,
     name: 'Sarah Johnson',
     role: 'Home Buyer',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
+    image: '/images/testimonial-1.jpg',
     quote: 'Shuchi made the home buying process so smooth. Her knowledge of the local market and negotiation skills saved us thousands!'
   },
   {
     id: 2,
     name: 'Michael Rodriguez',
     role: 'Property Seller',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
+    image: '/images/testimonial-2.jpg',
     quote: 'I needed to sell my house quickly, and Shuchi handled everything. From staging to closing, she was professional and efficient.'
   },
   {
     id: 3,
     name: 'Jennifer Taylor',
     role: 'Title Insurance Client',
-    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
+    image: '/images/testimonial-3.jpg',
     quote: 'The title insurance process can be confusing, but Shuchi explained everything clearly and made sure our property rights were protected.'
   },
   {
     id: 4,
     name: 'David Wilson',
     role: 'Notary Client',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
+    image: '/images/testimonial-4.jpg',
     quote: 'Needed urgent notarization for business documents and Shuchi was available on short notice. She even came to my office. Excellent service!'
   }
 ];

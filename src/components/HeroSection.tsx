@@ -132,13 +132,20 @@ export default function HeroSection() {
             className="hidden md:block"
           >
             <div className="relative h-[600px] w-full rounded-lg overflow-hidden shadow-2xl">
-              <Image
-                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80"
-                alt="Real estate professional"
-                fill
-                style={{ objectFit: 'cover' }}
-                priority
-              />
+              {/* Video Background */}
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="/videos/hero-background.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              
+              {/* Optional overlay for better text visibility if needed */}
+              <div className="absolute inset-0 bg-black opacity-10"></div>
             </div>
           </MotionDiv>
         </div>
