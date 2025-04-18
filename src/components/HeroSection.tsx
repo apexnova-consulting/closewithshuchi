@@ -18,14 +18,25 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative bg-soft-pink overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 z-0 opacity-20">
-        <div className="absolute inset-0 bg-pattern" />
+    <section className="relative min-h-[85vh] bg-soft-pink overflow-hidden">
+      {/* Full-width video background */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/videos/hero-background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Semi-transparent overlay for better text visibility */}
+        <div className="absolute inset-0 bg-soft-pink opacity-50"></div>
       </div>
       
       <div className="container relative z-10 py-16 md:py-24 lg:py-32">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-3xl mx-auto md:mr-auto md:ml-0">
           <MotionDiv 
             initial="hidden"
             animate="visible"
@@ -123,30 +134,6 @@ export default function HeroSection() {
                 </form>
               </MotionDiv>
             )}
-          </MotionDiv>
-          
-          <MotionDiv
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden md:block"
-          >
-            <div className="relative h-[600px] w-full rounded-lg overflow-hidden shadow-2xl">
-              {/* Video Background */}
-              <video
-                className="w-full h-full object-cover"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src="/videos/hero-background.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              
-              {/* Optional overlay for better text visibility if needed */}
-              <div className="absolute inset-0 bg-black opacity-10"></div>
-            </div>
           </MotionDiv>
         </div>
       </div>
