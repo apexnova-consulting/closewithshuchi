@@ -35,37 +35,73 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
       
-      <div className="container relative z-10 py-16 md:py-24 lg:py-32">
+      <div className="container relative z-10 py-12 md:py-24 lg:py-32 px-4 md:px-6">
         <div className="max-w-3xl mx-auto md:mr-auto md:ml-0">
           <MotionDiv 
             initial="hidden"
             animate="visible"
             variants={fadeIn}
-            className="text-center md:text-left bg-black bg-opacity-30 p-8 rounded-lg"
+            className="text-center md:text-left bg-black bg-opacity-30 p-6 md:p-8 rounded-lg backdrop-blur-sm"
           >
-            <h1 className="mb-6 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">
-              Your All-In-One Real Estate, Title & Notary Expert in New Jersey
+            <h1 className="mb-6 text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">
+              Three Services. One Trusted Expert.
             </h1>
             
+            <h2 className="mb-4 text-2xl md:text-3xl font-heading text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">
+              Buy, insure, and notarize — all with Shuchi Alam.
+            </h2>
+            
             <p className="mb-8 text-xl text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.7)]">
-              Whether you're buying, selling, closing a deal, or notarizing documents — Shuchi Alam makes it seamless.
+              Licensed in NJ as a Real Estate Agent, Title Insurance Producer, and Notary, Shuchi offers seamless support for every step of your real estate journey — or stand-alone services when you need them most.
             </p>
             
+            {/* Service Tiles */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8">
+              <motion.div 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white bg-opacity-95 p-4 md:p-6 rounded-lg shadow-lg cursor-pointer transform transition-transform duration-200"
+              >
+                <div className="text-4xl mb-4">🏡</div>
+                <h3 className="text-xl font-heading font-bold mb-2 text-secondary">Real Estate Services</h3>
+                <p className="text-sm text-secondary">Expert guidance for buying and selling properties in NJ</p>
+              </motion.div>
+
+              <motion.div 
+                whileHover={{ scale: 1.05 }}
+                className="bg-white bg-opacity-95 p-6 rounded-lg shadow-lg cursor-pointer"
+              >
+                <div className="text-4xl mb-4">🛡️</div>
+                <h3 className="text-xl font-heading font-bold mb-2 text-secondary">Title Insurance</h3>
+                <p className="text-sm text-secondary">Protect your property investment with comprehensive coverage</p>
+              </motion.div>
+
+              <motion.div 
+                whileHover={{ scale: 1.05 }}
+                className="bg-white bg-opacity-95 p-6 rounded-lg shadow-lg cursor-pointer"
+              >
+                <div className="text-4xl mb-4">✍️</div>
+                <h3 className="text-xl font-heading font-bold mb-2 text-secondary">Notary Services</h3>
+                <p className="text-sm text-secondary">Convenient and professional document notarization</p>
+              </motion.div>
+            </div>
+
+            {/* CTAs */}
             <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
               <a 
                 href="https://calendly.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn btn-primary"
+                className="px-6 py-3 bg-primary-dark text-white font-bold rounded-lg shadow-lg hover:bg-opacity-90 transition-all"
               >
                 Book a Free Consultation
               </a>
               
               <button 
                 onClick={() => setShowEmailForm(!showEmailForm)}
-                className="btn bg-white text-primary border border-primary hover:bg-gray-50"
+                className="px-6 py-3 bg-accent text-white font-bold rounded-lg shadow-lg hover:bg-opacity-90 transition-all"
               >
-                Get a Quick Quote
+                Download Free Guide
               </button>
             </div>
             
