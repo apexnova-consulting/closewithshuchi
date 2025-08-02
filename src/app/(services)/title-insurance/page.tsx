@@ -1,19 +1,12 @@
 "use client";
 
 import { useState } from 'react';
-import { Metadata } from 'next';
 import Image from 'next/image';
 import CalendarModal from '@/components/CalendarModal';
 import StructuredData from '@/components/StructuredData';
 import { generateServiceStructuredData, generateProfessionalStructuredData } from '@/utils/structuredData';
 import { getTestimonialsByService } from '@/data/testimonials';
 import TestimonialCard from '@/components/TestimonialCard';
-
-export const metadata: Metadata = {
-  title: 'Title Insurance Services | Shuchi Alam - NJ Title Insurance Producer',
-  description: 'Protect your property investment with comprehensive title insurance in New Jersey. Expert guidance from a licensed title insurance producer.',
-  keywords: 'title insurance, NJ title insurance, property title, title search, title producer',
-};
 
 export default function TitleInsurancePage() {
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);

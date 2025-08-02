@@ -1,19 +1,12 @@
 "use client";
 
 import { useState } from 'react';
-import { Metadata } from 'next';
 import Image from 'next/image';
 import CalendarModal from '@/components/CalendarModal';
 import StructuredData from '@/components/StructuredData';
 import { generateServiceStructuredData, generateProfessionalStructuredData } from '@/utils/structuredData';
 import { getTestimonialsByService } from '@/data/testimonials';
 import TestimonialCard from '@/components/TestimonialCard';
-
-export const metadata: Metadata = {
-  title: 'Real Estate Services | Shuchi Alam - NJ Real Estate Agent',
-  description: 'Expert real estate services in New Jersey. Whether buying or selling, get personalized guidance from a licensed professional.',
-  keywords: 'real estate agent, NJ realtor, buy house NJ, sell house NJ, New Jersey real estate',
-};
 
 export default function RealEstatePage() {
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
