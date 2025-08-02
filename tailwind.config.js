@@ -11,13 +11,17 @@ module.exports = {
         primary: {
           DEFAULT: '#F8E9F0', // Blush Pink
           dark: '#D6A5C0', // Dusty Rose
+          light: '#FDF4F8', // Lighter Blush Pink
         },
         secondary: {
           DEFAULT: '#3E3E3E', // Charcoal Gray
+          dark: '#2A2A2A', // Darker Charcoal
           light: '#FFFFFF', // Soft White
         },
         accent: {
           DEFAULT: '#D1B07C', // Gold Accent
+          dark: '#B89559', // Darker Gold
+          light: '#E5CCA3', // Lighter Gold
         },
       },
       fontFamily: {
@@ -27,4 +31,4 @@ module.exports = {
     },
   },
   plugins: [],
-} 
+}
