@@ -2,24 +2,22 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { MotionDiv } from './motion-wrapper';
 
-export default function HeroSection() {
-  const [showEmailForm, setShowEmailForm] = useState(false);
+const fadeIn: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.6 }
+  }
+};
 
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
+export default function HeroSection(): JSX.Element {
   return (
-    <section className="relative min-h-[85vh] bg-soft-pink overflow-hidden">
-      {/* Full-width video background */}
+    <section className="relative min-h-[90vh] bg-secondary overflow-hidden">
+      {/* Background Video with Overlay */}
       <div className="absolute inset-0 w-full h-full z-0">
         <video
           className="w-full h-full object-cover"
@@ -31,148 +29,82 @@ export default function HeroSection() {
           <source src="/videos/hero-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        {/* Darker semi-transparent overlay for better text visibility */}
-        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div className="absolute inset-0 bg-hero-pattern"></div>
       </div>
       
-      <div className="container relative z-10 py-12 md:py-24 lg:py-32 px-4 md:px-6">
-        <div className="max-w-3xl mx-auto md:mr-auto md:ml-0">
-          <MotionDiv 
+      <div className="container relative z-10 h-full flex items-center py-16 md:py-24 lg:py-32">
+        <div className="max-w-4xl">
+          <motion.div 
             initial="hidden"
             animate="visible"
             variants={fadeIn}
-            className="text-center md:text-left bg-black bg-opacity-30 p-6 md:p-8 rounded-lg backdrop-blur-sm"
+            className="text-left space-y-8"
           >
-            <h1 className="mb-6 text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">
-              Three Services. One Trusted Expert.
+            {/* Main Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight text-white">
+              New Jersey Real Estate, Title Insurance & Notary Services — Fast, Reliable, Local.
             </h1>
             
-            <h2 className="mb-4 text-2xl md:text-3xl font-heading text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">
-              Buy, insure, and notarize — all with Shuchi Alam.
-            </h2>
-            
-            <p className="mb-8 text-xl text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.7)]">
-              Licensed in NJ as a Real Estate Agent, Title Insurance Producer, and Notary, Shuchi offers seamless support for every step of your real estate journey — or stand-alone services when you need them most.
+            {/* Subheadline */}
+            <p className="text-xl md:text-2xl text-neutral-100 leading-relaxed">
+              From closings to notarizations, we make the entire process seamless and secure.
             </p>
             
-            {/* Service Tiles */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8">
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white bg-opacity-95 p-4 md:p-6 rounded-lg shadow-lg cursor-pointer transform transition-transform duration-200"
-              >
-                <div className="text-4xl mb-4">🏡</div>
-                <h3 className="text-xl font-heading font-bold mb-2 text-secondary">Real Estate Services</h3>
-                <p className="text-sm text-secondary">Expert guidance for buying and selling properties in NJ</p>
-              </motion.div>
-
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                className="bg-white bg-opacity-95 p-6 rounded-lg shadow-lg cursor-pointer"
-              >
-                <div className="text-4xl mb-4">🛡️</div>
-                <h3 className="text-xl font-heading font-bold mb-2 text-secondary">Title Insurance</h3>
-                <p className="text-sm text-secondary">Protect your property investment with comprehensive coverage</p>
-              </motion.div>
-
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                className="bg-white bg-opacity-95 p-6 rounded-lg shadow-lg cursor-pointer"
-              >
-                <div className="text-4xl mb-4">✍️</div>
-                <h3 className="text-xl font-heading font-bold mb-2 text-secondary">Notary Services</h3>
-                <p className="text-sm text-secondary">Convenient and professional document notarization</p>
-              </motion.div>
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-              <a 
-                href="https://calendly.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="px-6 py-3 bg-primary-dark text-white font-bold rounded-lg shadow-lg hover:bg-opacity-90 transition-all"
-              >
-                Book a Free Consultation
-              </a>
-              
-              <button 
-                onClick={() => setShowEmailForm(!showEmailForm)}
-                className="px-6 py-3 bg-accent text-white font-bold rounded-lg shadow-lg hover:bg-opacity-90 transition-all"
-              >
-                Download Free Guide
-              </button>
+            {/* Trust Badges */}
+            <div className="flex flex-wrap gap-6 py-6">
+              <div className="flex items-center gap-2 text-white">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>Licensed NJ Realtor</span>
+              </div>
+              <div className="flex items-center gap-2 text-white">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>Certified Notary Public</span>
+              </div>
+              <div className="flex items-center gap-2 text-white">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>Title Insurance Specialist</span>
+              </div>
             </div>
             
-            {/* Email form popup */}
-            {showEmailForm && (
-              <MotionDiv 
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="mt-8 p-6 bg-white rounded-lg shadow-xl"
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a 
+                href="#quote-form"
+                className="btn bg-primary hover:bg-primary-dark text-white font-bold text-lg shadow-lg transform transition hover:scale-105"
               >
-                <h3 className="text-lg font-bold mb-4 text-gray-800">Request a Quick Quote</h3>
-                <form className="space-y-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
-                      placeholder="Your Name"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
-                      placeholder="Your Email"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
-                      Service Needed
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
-                      required
-                    >
-                      <option value="">Select a Service</option>
-                      <option value="real-estate">Real Estate</option>
-                      <option value="title">Title Insurance</option>
-                      <option value="notary">Notary Services</option>
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <button
-                      type="submit"
-                      className="w-full btn btn-primary"
-                    >
-                      Send Request
-                    </button>
-                  </div>
-                </form>
-              </MotionDiv>
-            )}
-          </MotionDiv>
+                Get a Free Quote
+              </a>
+              
+              <a 
+                href="#notary-booking"
+                className="btn bg-accent hover:bg-accent-dark text-white font-bold text-lg shadow-lg transform transition hover:scale-105"
+              >
+                Book a Notary
+              </a>
+              
+              <a 
+                href="https://calendly.com/shuchialamrealtor/consultation-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn bg-secondary-light hover:bg-neutral-200 text-secondary font-bold text-lg shadow-lg transform transition hover:scale-105"
+              >
+                Schedule a Consultation
+              </a>
+            </div>
+
+            {/* Location Tags for SEO */}
+            <div className="text-neutral-300 text-sm mt-8">
+              Serving: Princeton • Trenton • Lambertville • Flemington • Mercer County • and surrounding NJ areas
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
   );
-} 
+}
