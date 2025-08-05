@@ -100,7 +100,7 @@ export default function HeroSection(): JSX.Element {
 
             {/* Location Tags for SEO */}
             <div className="text-neutral-300 text-sm mt-8">
-              Serving: Princeton • Trenton • Lambertville • Flemington • Mercer County • and surrounding NJ areas
+              Serving: Essex County • Union County • Passaic County • Hudson County • Morris County • and all of North & Central New Jersey
             </div>
           </motion.div>
         </div>
