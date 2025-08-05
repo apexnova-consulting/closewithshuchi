@@ -16,7 +16,7 @@ const fadeIn: Variants = {
 
 export default function HeroSection(): JSX.Element {
   return (
-    <section className="relative min-h-[90vh] bg-secondary overflow-hidden">
+    <section className="relative min-h-[90vh] bg-secondary overflow-hidden z-0">
       {/* Background Video with Overlay */}
       <div className="absolute inset-0 w-full h-full z-0">
         <video
