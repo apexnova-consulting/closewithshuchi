@@ -317,7 +317,7 @@ export default function ContactSection() {
                 Ready to schedule a free consultation? Use my online booking system to find a time that works for you.
               </p>
               <a 
-                href="https://calendly.com" 
+                href="https://calendly.com/shuchi-alam/consultation-call" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block w-full py-3 px-4 bg-white text-primary text-center font-medium rounded-md hover:bg-gray-100 transition-colors"
