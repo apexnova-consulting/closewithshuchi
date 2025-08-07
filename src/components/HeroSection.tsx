@@ -89,7 +89,7 @@ export default function HeroSection(): JSX.Element {
               </a>
               
               <a 
-                href="https://calendly.com/shuchi-alam/consultation-call"
+                href="https://calendly.com/shuchialamrealtor/consultation-call"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn bg-secondary-light hover:bg-neutral-200 text-secondary font-bold text-lg shadow-lg transform transition hover:scale-105"

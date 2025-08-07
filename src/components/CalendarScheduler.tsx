@@ -9,9 +9,9 @@ interface CalendarSchedulerProps {
 }
 
 const SERVICE_URLS = {
-  'real-estate': 'https://calendly.com/shuchi-alam/consultation-call',
-  'title-insurance': 'https://calendly.com/shuchi-alam/consultation-call',
-  'notary': 'https://calendly.com/shuchi-alam/notary-services',
+  'real-estate': 'https://calendly.com/shuchialamrealtor/consultation-call',
+  'title-insurance': 'https://calendly.com/shuchialamrealtor/consultation-call',
+  'notary': 'https://calendly.com/shuchialamrealtor/consultation-call',
 };
 
 export default function CalendarScheduler({ serviceType, className = '' }: CalendarSchedulerProps) {
